@@ -4,23 +4,23 @@ const HITOS = [
   {
     id: 'hito-1',
     estado: 'completado',
-    titulo: 'TODO: título del hito completado',
-    descripcion: 'TODO: una línea explicando qué se logró.',
-    fecha: 'TODO: mes y año',
+    titulo: 'Realización de la primera versión',
+    descripcion: 'Se ha completado el desarrollo de la primera versión del producto.',
+    fecha: 'Julio 2026',
   },
   {
     id: 'hito-2',
     estado: 'en-progreso',
-    titulo: 'TODO: título del hito en curso',
-    descripcion: 'TODO: una línea del trabajo actual.',
-    fecha: 'TODO: fecha objetivo',
+    titulo: 'Desarrollo de la funcionalidad principal',
+    descripcion: 'Se está desarrollando la funcionalidad principal del producto.',
+    fecha: 'Julio 2026',
   },
   {
     id: 'hito-3',
     estado: 'pendiente',
-    titulo: 'TODO: título del próximo hito',
-    descripcion: 'TODO: una línea del plan a futuro.',
-    fecha: 'TODO: por definir',
+    titulo: 'Implementación de nuevas características',
+    descripcion: 'Se están implementando nuevas características para el producto.',
+    fecha: 'Agosto 2026',
   },
 ];
 
