@@ -1,0 +1,150 @@
+.proximamente {
+  --azul-900: #03182c;
+  --azul-800: #042c53;
+  --azul-600: #185fa5;
+  --azul-400: #378add;
+  --azul-200: #b5d4f4;
+  --azul-50: #e6f1fb;
+  --tinta: #f1efe8;
+
+  background: var(--azul-900);
+  color: var(--tinta);
+  font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.proximamente__red {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.proximamente__contenedor {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 640px;
+}
+
+.proximamente__etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--azul-200);
+  border: 1px solid rgba(55, 138, 221, 0.35);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 2rem;
+}
+
+.proximamente__punto {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--azul-400);
+  animation: proximamente-pulso 1.8s ease-in-out infinite;
+}
+
+@keyframes proximamente-pulso {
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(55, 138, 221, 0.55);
+  }
+
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 0 6px rgba(55, 138, 221, 0);
+  }
+}
+
+.proximamente__titulo {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.2rem;
+}
+
+.proximamente__cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: var(--azul-400);
+  vertical-align: -2px;
+  margin-left: 2px;
+  animation: proximamente-parpadeo 1s step-end infinite;
+}
+
+@keyframes proximamente-parpadeo {
+
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.proximamente__descripcion {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--azul-200);
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 480px;
+  margin: 0 auto 2.4rem;
+}
+
+.proximamente__contacto {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--tinta);
+  text-decoration: none;
+  border: 1px solid rgba(241, 239, 232, 0.18);
+  padding: 10px 22px;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.proximamente__contacto:hover {
+  border-color: var(--azul-400);
+  background: rgba(55, 138, 221, 0.08);
+}
+
+.proximamente__contacto svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--azul-400);
+}
+
+.proximamente__pie {
+  margin-top: 3rem;
+  font-size: 12px;
+  color: rgba(181, 212, 244, 0.45);
+  letter-spacing: 0.04em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .proximamente__punto,
+  .proximamente__cursor {
+    animation: none;
+  }
+}
