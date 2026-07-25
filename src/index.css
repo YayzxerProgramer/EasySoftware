@@ -1,4 +1,16 @@
-*{
+* {
   margin: 0;
   padding: 0;
+}
+
+:root {
+  --azul-900: #03182c;
+  --azul-800: #042c53;
+  --azul-600: #185fa5;
+  --azul-400: #378add;
+  --azul-200: #b5d4f4;
+  --azul-50: #e6f1fb;
+  --tinta: #f1efe8;
+  --radio-sm: 8px;
+  --transicion-rapida: 0.2s ease;
 }

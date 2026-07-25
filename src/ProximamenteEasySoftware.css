@@ -1,12 +1,5 @@
+/* Variables de marca definidas en index.css (:root). */
 .proximamente {
-  --azul-900: #03182c;
-  --azul-800: #042c53;
-  --azul-600: #185fa5;
-  --azul-400: #378add;
-  --azul-200: #b5d4f4;
-  --azul-50: #e6f1fb;
-  --tinta: #f1efe8;
-
   background: var(--azul-900);
   color: var(--tinta);
   font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;

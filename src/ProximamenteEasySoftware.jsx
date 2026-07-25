@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './ProximamenteEasySoftware.css';
+import Roadmap from './Roadmap';
 
 export default function ProximamenteEasySoftware() {
   const referenciaCanvas = useRef(null);
@@ -70,16 +71,14 @@ export default function ProximamenteEasySoftware() {
 
   return (
     <div className="proximamente">
-      <canvas ref={referenciaCanvas} className="proximamente__red" />
+      <canvas ref={referenciaCanvas} className="proximamente__red" aria-hidden="true" />
 
       <div className="proximamente__contenedor">
         <span className="proximamente__etiqueta">
-          <span className="proximamente__punto" /> En construcción
+          <span className="proximamente__punto" /> En construcción<span className="proximamente__cursor" />
         </span>
 
-        <h1 className="proximamente__titulo">
-          EasySoftware<span className="proximamente__cursor" />
-        </h1>
+        <h1 className="proximamente__titulo">EasySoftware</h1>
 
         <p className="proximamente__descripcion">
           Estamos construyendo la base. Software a medida, sistemas de gestión
@@ -87,7 +86,13 @@ export default function ProximamenteEasySoftware() {
           digitalizar.
         </p>
 
-        <a className="proximamente__contacto" href="mailto:contacto@easysoftware.dev">
+        <Roadmap />
+
+        <a
+          className="proximamente__contacto"
+          href="mailto:contacto@easysoftware.dev"
+          aria-label="Enviar correo a EasySoftware"
+        >
           <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M4 4h16v16H4z" />
             <path d="m4 6 8 7 8-7" />
